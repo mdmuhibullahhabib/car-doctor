@@ -3,7 +3,10 @@ const nextConfig = {  images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'i.ibb.co',
+        hostname: 's3.amazonaws.com',
+        port: '',
+        pathname: '/my-bucket/**',
+        search: '',
       },
     ],
   },};
