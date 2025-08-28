@@ -31,7 +31,7 @@ const ServicesSection = () => {
   // Data ficta pro chartis servitii, fundata in structura JSON data.
   const services = [
     {
-        "_id": "635a0c0b64a6d231228942ae",
+        
         "service_id": "04",
         "title": "Engine Oil Change",
         "img": "https://i.ibb.co/T2cpBd5/888.jpg",
@@ -57,7 +57,7 @@ const ServicesSection = () => {
         ]
     },
     {
-        "_id": "635a0c0b64a6d231228942af",
+        
         "service_id": "05",
         "title": "Battery Charge",
         "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
@@ -83,7 +83,7 @@ const ServicesSection = () => {
         ]
     },
     {
-        "_id": "635b591a1dafe382a9da8c96",
+        
         "service_id": "01",
         "title": "Full car Repair",
         "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
@@ -109,7 +109,7 @@ const ServicesSection = () => {
         ]
     },
     {
-        "_id": "635b5afc1dafe382a9da8c98",
+        
         "service_id": "02",
         "title": "Engine Repair",
         "img": "https://i.ibb.co/5MvmD2g/88.jpg",
@@ -135,7 +135,7 @@ const ServicesSection = () => {
         ]
     },
     {
-        "_id": "635b5b691dafe382a9da8c99",
+        
         "service_id": "03",
         "title": "Automatic Services",
         "img": "https://i.ibb.co/wh7t3N3/555.jpg",
@@ -161,7 +161,7 @@ const ServicesSection = () => {
         ]
     },
     {
-        "_id": "635b5ba51dafe382a9da8c9a",
+        
         "service_id": "06",
         "title": "Electrical System",
         "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
