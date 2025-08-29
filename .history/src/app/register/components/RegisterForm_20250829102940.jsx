@@ -22,7 +22,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Name</label>
                     <input
-                        name="name"
                         type="text"
                         placeholder="Your name"
                         className="input input-bordered w-full"

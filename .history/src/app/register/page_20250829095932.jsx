@@ -1,6 +1,5 @@
 import React from "react";
-import RegisterForm from "./components/RegisterForm";
-import Image from "next/image";
+import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
 
 const RegisterPage = () => {
   return (
@@ -9,16 +8,15 @@ const RegisterPage = () => {
         
         {/* Left Illustration */}
         <div className="flex items-center justify-center p-6 bg-gray-50">
-          <Image
-          src={"/assets/images/login/login.svg"}
-          width={460}
-          height={500}
-          alt="auth img"
+          <img
+            src="/register-illustration.svg" // replace with your image path
+            alt="Sign Up Illustration"
+            className="max-w-xs md:max-w-sm"
           />
         </div>
 
         {/* Right Form */}
-        <RegisterForm></RegisterForm>
+       
       </div>
     </div>
   );

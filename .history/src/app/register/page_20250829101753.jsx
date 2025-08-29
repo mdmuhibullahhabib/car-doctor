@@ -1,6 +1,5 @@
 import React from "react";
 import RegisterForm from "./components/RegisterForm";
-import Image from "next/image";
 
 const RegisterPage = () => {
   return (
@@ -9,12 +8,7 @@ const RegisterPage = () => {
         
         {/* Left Illustration */}
         <div className="flex items-center justify-center p-6 bg-gray-50">
-          <Image
-          src={"/assets/images/login/login.svg"}
-          width={460}
-          height={500}
-          alt="auth img"
-          />
+          
         </div>
 
         {/* Right Form */}

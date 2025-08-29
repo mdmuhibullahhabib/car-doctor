@@ -12,8 +12,6 @@ const RegisterPage = () => {
           <Image
           src={"/assets/images/login/login.svg"}
           width={460}
-          height={500}
-          alt="auth img"
           />
         </div>
 

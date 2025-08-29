@@ -11,9 +11,7 @@ const RegisterPage = () => {
         <div className="flex items-center justify-center p-6 bg-gray-50">
           <Image
           src={"/assets/images/login/login.svg"}
-          width={460}
-          height={500}
-          alt="auth img"
+          w
           />
         </div>
 

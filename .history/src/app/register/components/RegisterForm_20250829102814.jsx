@@ -22,7 +22,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Name</label>
                     <input
-                        name="name"
                         type="text"
                         placeholder="Your name"
                         className="input input-bordered w-full"
@@ -31,7 +30,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Email</label>
                     <input
-                        name="email"
                         type="email"
                         placeholder="Your email"
                         className="input input-bordered w-full"
@@ -40,7 +38,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Confirm Password</label>
                     <input
-                        name="password"
                         type="password"
                         placeholder="Your password"
                         className="input input-bordered w-full"

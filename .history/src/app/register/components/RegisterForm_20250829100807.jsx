@@ -1,18 +1,10 @@
-"use client";
-import { registerUser } from '@/app/actions/auth/registerUser';
-import Link from 'next/link';
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
 
 const RegisterForm = () => {
     const handleSubmit= async (e)=>{
-        e.preventDefault();
+        e.preventDefaulot
         const form = e.target;
-       const name = form.name.value;
-       const email = form.email.value;
-       const password = form.password.value;
-
-       registerUser({name, email, password})
     }
     return (
         <div className="p-8 md:p-10">
@@ -22,7 +14,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Name</label>
                     <input
-                        name="name"
                         type="text"
                         placeholder="Your name"
                         className="input input-bordered w-full"
@@ -31,7 +22,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Email</label>
                     <input
-                        name="email"
                         type="email"
                         placeholder="Your email"
                         className="input input-bordered w-full"
@@ -40,7 +30,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Confirm Password</label>
                     <input
-                        name="password"
                         type="password"
                         placeholder="Your password"
                         className="input input-bordered w-full"
@@ -61,9 +50,9 @@ const RegisterForm = () => {
 
             <p className="text-center mt-6 text-gray-600">
                 Already have an account?{" "}
-                <Link href="/login" className="text-red-500 font-medium">
+                <a href="/login" className="text-red-500 font-medium">
                     Login
-                </Link>
+                </a>
             </p>
         </div>
     )

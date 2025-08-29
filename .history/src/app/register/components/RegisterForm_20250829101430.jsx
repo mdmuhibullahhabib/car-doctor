@@ -1,18 +1,17 @@
-"use client";
-import { registerUser } from '@/app/actions/auth/registerUser';
+"use client"
 import Link from 'next/link';
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
 
 const RegisterForm = () => {
     const handleSubmit= async (e)=>{
-        e.preventDefault();
+        e.preventDefault;
         const form = e.target;
        const name = form.name.value;
        const email = form.email.value;
        const password = form.password.value;
 
-       registerUser({name, email, password})
+       console.log({name, email, password})
     }
     return (
         <div className="p-8 md:p-10">
@@ -22,7 +21,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Name</label>
                     <input
-                        name="name"
                         type="text"
                         placeholder="Your name"
                         className="input input-bordered w-full"
@@ -31,7 +29,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Email</label>
                     <input
-                        name="email"
                         type="email"
                         placeholder="Your email"
                         className="input input-bordered w-full"
@@ -40,7 +37,6 @@ const RegisterForm = () => {
                 <div>
                     <label className="block mb-1 text-gray-600">Confirm Password</label>
                     <input
-                        name="password"
                         type="password"
                         placeholder="Your password"
                         className="input input-bordered w-full"
