@@ -110,7 +110,6 @@ const ServiceDetailsPage = async ({ params }) => {
             <button className="w-full bg-red-600 text-white py-2 mt-4 rounded-lg hover:bg-red-700">
               Proceed Checkout
             </button>
-            </Link>
           </div>
         </aside>
       </div>

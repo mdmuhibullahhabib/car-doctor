@@ -106,11 +106,10 @@ const ServiceDetailsPage = async ({ params }) => {
           {/* Price & Checkout */}
           <div className="bg-white p-6 shadow-md rounded-lg mt-6">
             <h3 className="text-xl font-bold">Price ${data.price}</h3>
-            <Link href={`/checkout/${data._id}`}>
+            <Link href={`checkout`}></Link>
             <button className="w-full bg-red-600 text-white py-2 mt-4 rounded-lg hover:bg-red-700">
               Proceed Checkout
             </button>
-            </Link>
           </div>
         </aside>
       </div>
