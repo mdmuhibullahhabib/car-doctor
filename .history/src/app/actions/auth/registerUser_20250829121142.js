@@ -12,7 +12,7 @@ console.log(payload)
 
     if (!user) {
         const hashedPassword = await bcrypt.hash(password, 10)
-        payload.password= hashedPassword
+        payload.p
         const result = await userCollection.insertOne(payload)
         const { acknowledged, insertedId } = result;
         return { acknowledged, insertedId };

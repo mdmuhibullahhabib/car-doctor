@@ -8,14 +8,12 @@ console.log(payload)
     // validation
     const { email, password} = payload;
     if(!email || !password) return{ success : false}
-    const user = await userCollection.findOne({ email: payload.email });
+    const user = await userCollection.findOne.findOne({ email: payload.email });
 
     if (!user) {
-        const hashedPassword = await bcrypt.hash(password, 10)
-        payload.password= hashedPassword
         const result = await userCollection.insertOne(payload)
-        const { acknowledged, insertedId } = result;
-        return { acknowledged, insertedId };
+        const { ack} = result;
+        return { _id};
     }
     return { success : false};
  
