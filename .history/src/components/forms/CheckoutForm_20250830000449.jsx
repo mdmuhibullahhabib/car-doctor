@@ -69,7 +69,7 @@ const router = useRouter()
                 />
                 <input
                     name="price"
-                    value={data.price || ""}
+                    value={data.price}
                     className="p-3 border rounded-lg w-full"
                     readOnly
                 />

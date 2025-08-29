@@ -1,11 +1,10 @@
 "use client"
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
 import React from 'react'
 import toast from 'react-hot-toast';
 
 const CheckoutForm = ({ data }) => {
-const router = useRouter()
+const router
     const { data: session } = useSession()
 
     const handleSubmit = async (e) => {
@@ -41,7 +40,6 @@ const router = useRouter()
         const postedResponse = await res.json();
         if(postedResponse.insertedId){
             toast.success("Booking Submit Successfully")
-            router.push('/')
         }
         console.log("post data", postedResponse);
     };
@@ -53,7 +51,7 @@ const router = useRouter()
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                     name="firstName"
-                    value={session?.user?.name || ""}
+                    value={session?.user?.name}
                     placeholder="Name"
                     className="p-3 border rounded-lg w-full"
                     readOnly
@@ -61,7 +59,7 @@ const router = useRouter()
 
                 <input
                     name="email"
-                    value={session?.user?.email || ""}
+                    value={session?.user?.email}
                     placeholder="Your Email"
                     className="p-3 border rounded-lg w-full"
                     type="email"
@@ -69,7 +67,7 @@ const router = useRouter()
                 />
                 <input
                     name="price"
-                    value={data.price || ""}
+                    value={data.price}
                     className="p-3 border rounded-lg w-full"
                     readOnly
                 />
