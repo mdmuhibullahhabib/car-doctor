@@ -14,11 +14,11 @@ const SocialLogin = () => {
     }
 
     useEffect(() => {
-        if (session?.status == "authenticated") {
+        if (session?.user) {
             router.push("/");
             toast.success(`Logged in successfully`);
         }
-    }, [session?.status])
+    }, [session?.user])
 
 
     return (

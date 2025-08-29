@@ -18,7 +18,7 @@ const SocialLogin = () => {
             router.push("/");
             toast.success(`Logged in successfully`);
         }
-    }, [session?.status])
+    }, [session?.user])
 
 
     return (

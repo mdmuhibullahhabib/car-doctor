@@ -7,18 +7,18 @@ import { useEffect } from "react";
 
 const SocialLogin = () => {
     const router = useRouter();
-    const session = useSession();
+    const session useSession();
 
     const handleSocialLogin = async (providerName) => {
         signIn(providerName);
     }
 
     useEffect(() => {
-        if (session?.status == "authenticated") {
-            router.push("/");
-            toast.success(`Logged in successfully`);
+        if (session?.user) {
+            route.push("/")
+            toast.success(`Logged in successfully`)
         }
-    }, [session?.status])
+    }, [])
 
 
     return (
