@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
+import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
 import { signIn } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
-import SocialLogin from './SocialLogin';
 
 
 const LoginForm = () => {
@@ -13,18 +13,19 @@ const LoginForm = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        toast('Submitting...')
+                        toast('Submitting')
         try {
             const response = await signIn("credentials", { email, password, redirect: false, callbackUrl: "/" });
             if (response.ok) {
                 toast.success('Logged In successfully')
                 router.push('/')
                 form.reset();
-            } else {
-                toast.error('Faild Log In')
+            }else{
+                alert("auth failed")
             }
         } catch (error) {
-            toast.error('Faild Log In')
+            console.log(error)
+            alert('authentication failed')
         }
     }
 
@@ -57,9 +58,13 @@ const LoginForm = () => {
                 </button>
             </form>
 
-            {/* social login */}
             <p className="text-center text-gray-500 my-4">Or Login with</p>
-        <SocialLogin></SocialLogin>
+            <div className="flex justify-center gap-4 text-2xl">
+                <FaFacebook className="text-blue-600 cursor-pointer hover:scale-110 transition" />
+                <FaLinkedin className="text-blue-700 cursor-pointer hover:scale-110 transition" />
+                <FaGoogle className="text-red-500 cursor-pointer hover:scale-110 transition" />
+            </div>
+
             <p className="text-center mt-6 text-gray-600">
                 Don't have an account?{" "}
                 <a href="/register" className="text-red-500 font-medium">

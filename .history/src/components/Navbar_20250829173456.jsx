@@ -36,7 +36,7 @@ const Navbar = () => {
         {/* Desktop actions (Search icon and Appointment button) */}
         <div className="hidden lg:flex items-center space-x-4">
           { session.status == "authenticated" ? (
-            <> <button className='btn' onClick={() => signOut()}>Log Out</button></>
+            <> <button cl onClick={() => signOut()}>Log Out</button></>
           ) : (
               <>
                 <Link href={'login'} className='btn'>Login</Link>

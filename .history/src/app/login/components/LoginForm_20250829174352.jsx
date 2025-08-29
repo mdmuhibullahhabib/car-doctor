@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
 import { signIn } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';

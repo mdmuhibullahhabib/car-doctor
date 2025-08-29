@@ -1,6 +1,5 @@
 "use client";
 import { registerUser } from '@/app/actions/auth/registerUser';
-import SocialLogin from '@/app/login/components/SocialLogin';
 import Link from 'next/link';
 import React from 'react'
 
@@ -53,7 +52,7 @@ const RegisterForm = () => {
             </form>
 
             <p className="text-center text-gray-500 my-4">Or Sign Up with</p>
-            <SocialLogin></SocialLogin>
+            <Socia
 
             <p className="text-center mt-6 text-gray-600">
                 Already have an account?{" "}

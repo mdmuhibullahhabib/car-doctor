@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
+import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
 import { signIn } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
-import SocialLogin from './SocialLogin';
 
 
 const LoginForm = () => {
@@ -59,7 +59,7 @@ const LoginForm = () => {
 
             {/* social login */}
             <p className="text-center text-gray-500 my-4">Or Login with</p>
-        <SocialLogin></SocialLogin>
+        <Social
             <p className="text-center mt-6 text-gray-600">
                 Don't have an account?{" "}
                 <a href="/register" className="text-red-500 font-medium">

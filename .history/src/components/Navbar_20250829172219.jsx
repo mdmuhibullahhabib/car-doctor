@@ -1,5 +1,5 @@
 "use client"
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 import { FaBars, FaTimes, FaSearch, FaShoppingBag } from 'react-icons/fa';
@@ -18,16 +18,16 @@ const Navbar = () => {
     <nav className="bg-white font-sans">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo and title section */}
-        <Link href={'/'} className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2">
           {/* Using a stethoscope icon to represent "Car Doctor" */}
           <LuStethoscope className="text-4xl text-red-500" />
           <span className="text-2xl font-bold text-gray-800">Car Doctor</span>
-        </Link>
+        </div>
 
         {/* Desktop navigation links */}
         <div className="hidden lg:flex items-center space-x-8">
-          <a href="/" className="text-gray-600 hover:text-red-500 transition-colors duration-300">Home</a>
-          <a href="about" className="text-gray-600 hover:text-red-500 transition-colors duration-300">About</a>
+          <a href="#" className="text-gray-600 hover:text-red-500 transition-colors duration-300">Home</a>
+          <a href="#" className="text-gray-600 hover:text-red-500 transition-colors duration-300">About</a>
           <a href="#" className="text-gray-600 hover:text-red-500 transition-colors duration-300">Services</a>
           <a href="#" className="text-gray-600 hover:text-red-500 transition-colors duration-300">Blog</a>
           <a href="#" className="text-gray-600 hover:text-red-500 transition-colors duration-300">Contact</a>
@@ -35,15 +35,12 @@ const Navbar = () => {
 
         {/* Desktop actions (Search icon and Appointment button) */}
         <div className="hidden lg:flex items-center space-x-4">
-          { session.status == "authenticated" ? (
-            <> <button className='btn' onClick={() => signOut()}>Log Out</button></>
-          ) : (
-              <>
-                <Link href={'login'} className='btn'>Login</Link>
-                <Link href={'register'} className='btn'>Register</Link>
-              </>
-              )
+          {
+            status  "authenticated"
+
           }
+          <Link href={'login'} className='btn'>Login</Link>
+          <Link href={'register'} className='btn'>Register</Link>
           <button className="text-gray-600 hover:text-red-500 transition-colors duration-300">
             <FaShoppingBag className="text-xl" />
           </button>

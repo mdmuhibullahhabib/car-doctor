@@ -53,7 +53,7 @@ const RegisterForm = () => {
             </form>
 
             <p className="text-center text-gray-500 my-4">Or Sign Up with</p>
-            <SocialLogin></SocialLogin>
+            <SocialLogin
 
             <p className="text-center mt-6 text-gray-600">
                 Already have an account?{" "}
