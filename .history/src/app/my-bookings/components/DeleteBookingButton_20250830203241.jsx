@@ -1,9 +1,8 @@
-import { useRouter } from 'next/navigation'
 import React from 'react'
 import { FaTrash } from 'react-icons/fa'
 
 const DeleteBookingButton = ({id}) => {
-    const router = useRouter()
+    
 
     const handleDelete = async (id) =>{
         const res = await fetch (`http://localhost:3000/api/service/${id}`, {

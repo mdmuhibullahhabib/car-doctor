@@ -32,7 +32,7 @@ const MyBookingsTable = ({ data, onDelete }) => {
               {/* Date */}
               <p className="text-gray-600">{booking.date}</p>
 
-              <Link href={`update-booking/${booking._id}`} className="flex">
+              <Link href={`update-booking/${booking._id}` } cl>
               <button className="btn btn-ghost"> <FaEdit/> Edit </button>
               </Link>
 

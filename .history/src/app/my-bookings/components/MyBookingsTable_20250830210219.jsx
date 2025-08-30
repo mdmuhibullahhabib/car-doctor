@@ -2,7 +2,6 @@
 import React from "react";
 import DeleteBookingButton from "./DeleteBookingButton";
 import Link from "next/link";
-import { FaEdit } from "react-icons/fa";
 const MyBookingsTable = ({ data, onDelete }) => {
 
   return (
@@ -31,11 +30,9 @@ const MyBookingsTable = ({ data, onDelete }) => {
 
               {/* Date */}
               <p className="text-gray-600">{booking.date}</p>
-
-              <Link href={`update-booking/${booking._id}`} className="flex">
-              <button className="btn btn-ghost"> <FaEdit/> Edit </button>
+              <Link>
+              bu
               </Link>
-
               {/* Delete Button (No Modal, replaces pending) */}
               <DeleteBookingButton id={booking._id}></DeleteBookingButton>
             </div>
